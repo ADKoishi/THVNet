@@ -40,7 +40,7 @@ COSINE_ANNEALING = True
 ACTIVATION = "ReLU"
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 16
+FORWARD_LAYERS = 24
 
 # Training parameters for Res version
 LAYER_DEPTH = 6
@@ -55,7 +55,7 @@ DEVICE = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
 MODEL = 0
 
-RESCUE_START = 125
+RESCUE_START = 57
 if __name__ == "__main__":
     lock_random(LUCKY_SEED)
 

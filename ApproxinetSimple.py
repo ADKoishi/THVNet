@@ -36,4 +36,4 @@ class ApproximaNetZero(nn.Module):
         out = self.encoder(x)
         # out: (batch_size, num_outputs, dim_output)
 
-        return out.item()
+        return torch.squeeze(out)
