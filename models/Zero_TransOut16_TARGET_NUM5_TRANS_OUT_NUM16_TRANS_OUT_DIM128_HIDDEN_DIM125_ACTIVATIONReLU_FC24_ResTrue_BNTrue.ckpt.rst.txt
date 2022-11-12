@@ -71,3 +71,5 @@ now_epoch=29, loss=0.0004879727785009891, average_epoch_loss=0.00100730205004219
 Model in Epoch 29 Saved! With Average Validation Loss: 0.001007302050042199
 now_epoch=30, loss=0.0011936613591387868, average_epoch_loss=0.004408020266024525, mode=training, learning_rate=[0.00015000000000000001]
 now_epoch=30, loss=0.003687990130856633, average_epoch_loss=0.002420190779375844, mode=validation
+now_epoch=31, loss=0.0019790970254689455, average_epoch_loss=0.004123082006084991, mode=training, learning_rate=[0.00014965089268373428]
+now_epoch=31, loss=0.005955337081104517, average_epoch_loss=0.0027995005251723343, mode=validation
