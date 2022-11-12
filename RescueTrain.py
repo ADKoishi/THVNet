@@ -55,6 +55,7 @@ DEVICE = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
 MODEL = 0
 
+RESCUE_START = 125
 if __name__ == "__main__":
     lock_random(LUCKY_SEED)
 
@@ -117,11 +118,19 @@ if __name__ == "__main__":
         f"FC{FORWARD_LAYERS}_" \
         f"Res{USE_RES}_" \
         f"BN{USE_BATCH_NORM}.ckpt"
-    result_name = model_name + '.rst.txt'
 
+    result_name = model_name + '.rst.txt'
+    for epoch in range(RESCUE_START):
+        scheduler.step()
+
+    with open(result_name, mode='a+') as result_file:
+        result_file.write(f"Resume Training, scheduler recovered. Latest learning rate: {scheduler.get_last_lr()}\n")
+    print(f"Scheduler recovered! Latest learning rate: {scheduler.get_last_lr()}")
+
+    approximator.load_state_dict(torch.load(model_name))
     # Main training loop
     min_valid_loss = torch.inf
-    for epoch in range(NUM_EPOCH):
+    for epoch in range(RESCUE_START, NUM_EPOCH):
         # Training
         approximator.train()
         pbar = tqdm(trainDataLoader)

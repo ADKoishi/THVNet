@@ -26,7 +26,7 @@ COSINE_ANNEALING = True
 ACTIVATION = "ReLU"
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 32
+FORWARD_LAYERS = 16
 
 # Training parameters for Res version
 LAYER_DEPTH = 6
@@ -37,7 +37,7 @@ NUM_EPOCH = 125
 TRAIN_PROPORTION = 0.9
 LEARNING_RATE = 1e-5
 BATCH_SIZE = 200
-DEVICE = 'cuda:0' if torch.cuda.is_available() else 'cpu'
+DEVICE = 'cpu'
 
 MODEL = 0
 
