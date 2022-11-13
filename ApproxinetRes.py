@@ -33,7 +33,6 @@ class ApproximaNetRes(nn.Module):
                 or self.halfForwardDim % 2 != 0 \
                 or self.quarterForwardDim % 2 != 0 \
                 or self.eighthForwardDim % 2 != 0:
-
             self.resOn = False
             print("ResNet enabled but with odd forward layers, automatically disabled ResNet forward")
 

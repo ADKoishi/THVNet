@@ -1,3 +1,5 @@
+import re
+
 import numpy as np
 import scipy.io as scio
 
@@ -9,6 +11,6 @@ import scipy.io as scio
 import torch
 from torch import nn
 
-test = np.array([[1,2,3],[2,3,4]])
-
-print(test.transpose((1,0)))
+with open("models/Zero_TransOut16_TARGET_NUM5_TRANS_OUT_NUM16_TRANS_OUT_DIM128_HIDDEN_DIM125_ACTIVATIONReLU_FC16_ResTrue_BNTrue.ckpt.rst.txt", mode='r+') as result_file:
+    file_txt = result_file.read()
+    print(float(re.findall("Loss: .*", file_txt)[-1].split(": ")[-1]))

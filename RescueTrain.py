@@ -1,4 +1,5 @@
 import random
+import re
 import time
 
 import numpy as np
@@ -40,7 +41,7 @@ COSINE_ANNEALING = True
 ACTIVATION = "ReLU"
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 24
+FORWARD_LAYERS = 16
 
 # Training parameters for Res version
 LAYER_DEPTH = 6
@@ -55,7 +56,7 @@ DEVICE = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
 MODEL = 0
 
-RESCUE_START = 57
+RESCUE_START = 125
 if __name__ == "__main__":
     lock_random(LUCKY_SEED)
 
@@ -99,37 +100,39 @@ if __name__ == "__main__":
         ).to(DEVICE)
 
     criterion = MLSEloss()
-    optimizer = torch.optim.AdamW(approximator.parameters(), lr=15*LEARNING_RATE)
+    optimizer = torch.optim.AdamW(approximator.parameters(), lr=15 * LEARNING_RATE)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
         optimizer=optimizer,
         T_0=2, T_mult=2,
-        eta_min=LEARNING_RATE/2
+        eta_min=LEARNING_RATE / 2
     )
 
     model_name = \
         f"./models/" \
         f"{'Zero' if MODEL == 0 else 'Res'}_" \
         f"TransOut{TRANS_OUT_NUM}_" \
-        f"TARGET_NUM{TARGET_NUM}_"\
-        f"TRANS_OUT_NUM{TRANS_OUT_NUM}_"\
-        f"TRANS_OUT_DIM{TRANS_OUT_DIM}_"\
-        f"HIDDEN_DIM{HIDDEN_DIM}_"\
-        f"ACTIVATION{ACTIVATION}_"\
+        f"TARGET_NUM{TARGET_NUM}_" \
+        f"TRANS_OUT_NUM{TRANS_OUT_NUM}_" \
+        f"TRANS_OUT_DIM{TRANS_OUT_DIM}_" \
+        f"HIDDEN_DIM{HIDDEN_DIM}_" \
+        f"ACTIVATION{ACTIVATION}_" \
         f"FC{FORWARD_LAYERS}_" \
         f"Res{USE_RES}_" \
         f"BN{USE_BATCH_NORM}.ckpt"
 
     result_name = model_name + '.rst.txt'
+    with open(result_name, mode='r+') as result_file:
+        result_txt = result_file.read()
+        min_valid_loss = float(re.findall("Loss: .*", result_txt)[-1].split(": ")[-1])
+
     for epoch in range(RESCUE_START):
         scheduler.step()
-
     with open(result_name, mode='a+') as result_file:
         result_file.write(f"Resume Training, scheduler recovered. Latest learning rate: {scheduler.get_last_lr()}\n")
     print(f"Scheduler recovered! Latest learning rate: {scheduler.get_last_lr()}")
 
     approximator.load_state_dict(torch.load(model_name))
     # Main training loop
-    min_valid_loss = torch.inf
     for epoch in range(RESCUE_START, NUM_EPOCH):
         # Training
         approximator.train()
@@ -244,4 +247,4 @@ if __name__ == "__main__":
             mode="testing"
         )
     with open(result_name, mode='a+') as result_file:
-        result_file.write(str(accumulate_loss / batch_num))
+        result_file.write(str(accumulate_loss / batch_num) + "\n")

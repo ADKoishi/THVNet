@@ -34,13 +34,13 @@ TRANS_OUT_DIM = 128
 HIDDEN_DIM = (128 // TARGET_NUM) * TARGET_NUM
 DROP_OUT = 0
 USE_SAB = True
-USE_RES = True
+USE_RES = False
 USE_BATCH_NORM = True
 COSINE_ANNEALING = True
 ACTIVATION = "ReLU"
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 16
+FORWARD_LAYERS = 4
 
 # Training parameters for Res version
 LAYER_DEPTH = 6

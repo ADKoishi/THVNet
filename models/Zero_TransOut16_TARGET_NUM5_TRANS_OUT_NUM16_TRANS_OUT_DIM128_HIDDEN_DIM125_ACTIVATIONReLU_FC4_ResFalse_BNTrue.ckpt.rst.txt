@@ -1,0 +1,3 @@
+now_epoch=0, loss=0.04416312277317047, average_epoch_loss=0.16304383398882216, mode=training, learning_rate=[0.00015000000000000001]
+now_epoch=0, loss=0.3038056790828705, average_epoch_loss=0.40827299118041993, mode=validation
+Model in Epoch 0 Saved! With Average Validation Loss: 0.40827299118041993
