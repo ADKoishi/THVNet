@@ -256,3 +256,10 @@ now_epoch=121, loss=0.0006808570469729602, average_epoch_loss=0.0007153214686259
 now_epoch=121, loss=0.0034424145705997944, average_epoch_loss=0.0025952418877277523, mode=validation
 now_epoch=122, loss=0.0006400550482794642, average_epoch_loss=0.0007058764795510796, mode=training, learning_rate=[6.393067170765794e-06]
 now_epoch=122, loss=0.0026596379466354847, average_epoch_loss=0.003097009941469878, mode=validation
+now_epoch=123, loss=0.0003965656505897641, average_epoch_loss=0.0006761593583214562, mode=training, learning_rate=[5.784703027553377e-06]
+now_epoch=123, loss=0.003740896238014102, average_epoch_loss=0.0033647241223370658, mode=validation
+now_epoch=124, loss=0.00036429602187126875, average_epoch_loss=0.0006752536878419859, mode=training, learning_rate=[5.349107316265731e-06]
+now_epoch=124, loss=0.004712944384664297, average_epoch_loss=0.002998807073687203, mode=validation
+now_epoch=125, loss=0.0003357714449521154, average_epoch_loss=0.0006712269410733522, mode=training, learning_rate=[5.087329425125001e-06]
+now_epoch=125, loss=0.004041021689772606, average_epoch_loss=0.00469547630706802, mode=validation
+0.029300099322199822
