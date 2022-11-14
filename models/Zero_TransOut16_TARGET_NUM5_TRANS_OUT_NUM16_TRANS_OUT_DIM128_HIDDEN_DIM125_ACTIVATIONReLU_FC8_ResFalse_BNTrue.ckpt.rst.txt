@@ -255,3 +255,4 @@ now_epoch=120, loss=0.0026484853588044643, average_epoch_loss=0.0033512731485534
 now_epoch=121, loss=0.0006808570469729602, average_epoch_loss=0.0007153214686259162, mode=training, learning_rate=[7.1727341433955625e-06]
 now_epoch=121, loss=0.0034424145705997944, average_epoch_loss=0.0025952418877277523, mode=validation
 now_epoch=122, loss=0.0006400550482794642, average_epoch_loss=0.0007058764795510796, mode=training, learning_rate=[6.393067170765794e-06]
+now_epoch=122, loss=0.0026596379466354847, average_epoch_loss=0.003097009941469878, mode=validation
