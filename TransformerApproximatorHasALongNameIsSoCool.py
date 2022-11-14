@@ -34,19 +34,19 @@ TRANS_OUT_DIM = 128
 HIDDEN_DIM = (128 // TARGET_NUM) * TARGET_NUM
 DROP_OUT = 0
 USE_SAB = True
-USE_RES = False
+USE_RES = True
 USE_BATCH_NORM = True
 COSINE_ANNEALING = True
 ACTIVATION = "ReLU"
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 4
+FORWARD_LAYERS = 16
 
 # Training parameters for Res version
 LAYER_DEPTH = 6
 
 # Training parameters
-LUCKY_SEED = 114514
+LUCKY_SEED = 1919810
 NUM_EPOCH = 126
 TRAIN_PROPORTION = 0.9
 LEARNING_RATE = 1e-5
