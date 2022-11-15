@@ -31,7 +31,7 @@ def lock_random(luckySeed):
 # Model parameters
 TARGET_NUM = 5
 TRANS_OUT_NUM = 16
-TRANS_OUT_DIM = 128
+TRANS_OUT_DIM = 32
 HIDDEN_DIM = (128 // TARGET_NUM) * TARGET_NUM
 DROP_OUT = 0
 USE_SAB = True
@@ -44,7 +44,7 @@ ACTIVATION = "ReLU"
 FORWARD_LAYERS = 16
 
 # Training parameters for Res version
-LAYER_DEPTH = 6
+LAYER_DEPTH = 4
 
 # Training parameters
 LUCKY_SEED = 114514
@@ -54,9 +54,9 @@ LEARNING_RATE = 1e-5
 BATCH_SIZE = 200
 DEVICE = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
-MODEL = 0
+MODEL = 1
 
-RESCUE_START = 125
+RESCUE_START = 109
 if __name__ == "__main__":
     lock_random(LUCKY_SEED)
 

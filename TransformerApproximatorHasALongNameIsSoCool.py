@@ -43,7 +43,7 @@ ACTIVATION = "ReLU"
 FORWARD_LAYERS = 16
 
 # Training parameters for Res version
-LAYER_DEPTH = 6
+LAYER_DEPTH = 2
 
 # Training parameters
 LUCKY_SEED = 1919810
