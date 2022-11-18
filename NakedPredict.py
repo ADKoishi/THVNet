@@ -26,18 +26,15 @@ COSINE_ANNEALING = True
 ACTIVATION = "ReLU"
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 16
+FORWARD_LAYERS = 8
 
 # Training parameters for Res version
 LAYER_DEPTH = 6
 
 # Training parameters
 LUCKY_SEED = 114514
-NUM_EPOCH = 125
-TRAIN_PROPORTION = 0.9
-LEARNING_RATE = 1e-5
 BATCH_SIZE = 200
-DEVICE = 'cpu'
+DEVICE = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
 MODEL = 0
 
@@ -73,18 +70,7 @@ if __name__ == "__main__":
             dropOut=DROP_OUT
         ).to(DEVICE)
 
-    model_name = \
-        f"./models/" \
-        f"{'Zero' if MODEL == 0 else 'Res'}_" \
-        f"TransOut{TRANS_OUT_NUM}_" \
-        f"TARGET_NUM{TARGET_NUM}_"\
-        f"TRANS_OUT_NUM{TRANS_OUT_NUM}_"\
-        f"TRANS_OUT_DIM{TRANS_OUT_DIM}_"\
-        f"HIDDEN_DIM{HIDDEN_DIM}_"\
-        f"ACTIVATION{ACTIVATION}_"\
-        f"FC{FORWARD_LAYERS}_" \
-        f"Res{USE_RES}_" \
-        f"BN{USE_BATCH_NORM}.ckpt"
+    model_name = "./models/Zero_TransOut16_TARGET_NUM5_TRANS_OUT_NUM16_TRANS_OUT_DIM128_HIDDEN_DIM125_ACTIVATIONReLU_FC8_ResTrue_BNTrue.ckpt"
 
     # Prediction
     testSet = HVDataset(dataDir="./Datasets", objectNum=TARGET_NUM, seeds=[5])

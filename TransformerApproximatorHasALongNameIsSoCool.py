@@ -5,6 +5,7 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
+from ApproxinetMA import ApproximaNetMA
 from ApproxinetRes import ApproximaNetRes
 from ApproxinetZero import ApproximaNetZero
 
@@ -40,14 +41,14 @@ COSINE_ANNEALING = True
 ACTIVATION = "ReLU"
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 16
+FORWARD_LAYERS = 8
 
 # Training parameters for Res version
 LAYER_DEPTH = 2
 
 # Training parameters
-LUCKY_SEED = 1919810
-NUM_EPOCH = 126
+LUCKY_SEED = 114514
+NUM_EPOCH = 254
 TRAIN_PROPORTION = 0.9
 LEARNING_RATE = 1e-5
 BATCH_SIZE = 200
@@ -80,7 +81,7 @@ if __name__ == "__main__":
             batchNorm=USE_BATCH_NORM,
             dropOut=DROP_OUT
         ).to(DEVICE)
-    else:
+    if MODEL == 1:
         approximator = ApproximaNetRes(
             transInputDim=TARGET_NUM,
             transNHead=TARGET_NUM,
@@ -96,18 +97,49 @@ if __name__ == "__main__":
             batchNorm=USE_BATCH_NORM,
             dropOut=DROP_OUT
         ).to(DEVICE)
+    if MODEL == 2:
+        approximator = ApproximaNetMA(
+            transInputDim=TARGET_NUM,
+            transNHead=TARGET_NUM,
+            transOutputNum=TRANS_OUT_NUM,
+            transOutputDim=TRANS_OUT_DIM,
+            hiddenDim=HIDDEN_DIM,
+            useSAB=USE_SAB,
+            forwardLayers=FORWARD_LAYERS,
+            resOn=USE_RES,
+            batchNorm=USE_BATCH_NORM,
+            dropOut=DROP_OUT
+        ).to(DEVICE)
 
     criterion = MLSEloss()
+
     optimizer = torch.optim.AdamW(approximator.parameters(), lr=15*LEARNING_RATE)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
         optimizer=optimizer,
-        T_0=2, T_mult=2,
-        eta_min=LEARNING_RATE/2
+        T_0=2, T_mult=2
     )
+
+    # scheduler = torch.optim.lr_scheduler.OneCycleLR(
+    #     optimizer=optimizer,
+    #     max_lr=15*LEARNING_RATE,
+    #     total_steps=NUM_EPOCH*len(trainDataLoader),
+    #     pct_start=0.25,
+    #     div_factor=30,
+    #     cycle_momentum=True,
+    #     three_phase=True
+    # )
+
+    def getModelName():
+        if MODEL == 0:
+            return "Zero"
+        if MODEL == 1:
+            return "Res"
+        if MODEL == 2:
+            return "MA"
 
     model_name = \
         f"./models/" \
-        f"{'Zero' if MODEL == 0 else 'Res'}_" \
+        f"{getModelName()}_" \
         f"TransOut{TRANS_OUT_NUM}_" \
         f"TARGET_NUM{TARGET_NUM}_"\
         f"TRANS_OUT_NUM{TRANS_OUT_NUM}_"\
@@ -137,6 +169,7 @@ if __name__ == "__main__":
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
+            # scheduler.step()
             accumulate_loss += loss.item()
             pbar.set_postfix(
                 now_epoch=epoch,

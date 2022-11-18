@@ -31,7 +31,7 @@ def lock_random(luckySeed):
 # Model parameters
 TARGET_NUM = 5
 TRANS_OUT_NUM = 16
-TRANS_OUT_DIM = 32
+TRANS_OUT_DIM = 128
 HIDDEN_DIM = (128 // TARGET_NUM) * TARGET_NUM
 DROP_OUT = 0
 USE_SAB = True
@@ -41,22 +41,22 @@ COSINE_ANNEALING = True
 ACTIVATION = "ReLU"
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 16
+FORWARD_LAYERS = 8
 
 # Training parameters for Res version
 LAYER_DEPTH = 4
 
 # Training parameters
 LUCKY_SEED = 114514
-NUM_EPOCH = 126
+NUM_EPOCH = 254
 TRAIN_PROPORTION = 0.9
 LEARNING_RATE = 1e-5
 BATCH_SIZE = 200
 DEVICE = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
-MODEL = 1
+MODEL = 0
 
-RESCUE_START = 109
+RESCUE_START = 121
 if __name__ == "__main__":
     lock_random(LUCKY_SEED)
 
@@ -99,6 +99,8 @@ if __name__ == "__main__":
             dropOut=DROP_OUT
         ).to(DEVICE)
 
+    model_name = "./models/Zero_TransOut16_TARGET_NUM5_TRANS_OUT_NUM16_TRANS_OUT_DIM128_HIDDEN_DIM125_ACTIVATIONReLU_FC8_ResTrue_BNTrueCLR.ckpt"
+    approximator.load_state_dict(torch.load(model_name))
     criterion = MLSEloss()
     optimizer = torch.optim.AdamW(approximator.parameters(), lr=15 * LEARNING_RATE)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
@@ -106,19 +108,6 @@ if __name__ == "__main__":
         T_0=2, T_mult=2,
         eta_min=LEARNING_RATE / 2
     )
-
-    model_name = \
-        f"./models/" \
-        f"{'Zero' if MODEL == 0 else 'Res'}_" \
-        f"TransOut{TRANS_OUT_NUM}_" \
-        f"TARGET_NUM{TARGET_NUM}_" \
-        f"TRANS_OUT_NUM{TRANS_OUT_NUM}_" \
-        f"TRANS_OUT_DIM{TRANS_OUT_DIM}_" \
-        f"HIDDEN_DIM{HIDDEN_DIM}_" \
-        f"ACTIVATION{ACTIVATION}_" \
-        f"FC{FORWARD_LAYERS}_" \
-        f"Res{USE_RES}_" \
-        f"BN{USE_BATCH_NORM}.ckpt"
 
     result_name = model_name + '.rst.txt'
     with open(result_name, mode='r+') as result_file:
@@ -128,10 +117,9 @@ if __name__ == "__main__":
     for epoch in range(RESCUE_START):
         scheduler.step()
     with open(result_name, mode='a+') as result_file:
-        result_file.write(f"Resume Training, scheduler recovered. Latest learning rate: {scheduler.get_last_lr()}\n")
+        result_file.write(f"\nResume Training, scheduler recovered. Latest learning rate: {scheduler.get_last_lr()}\n")
     print(f"Scheduler recovered! Latest learning rate: {scheduler.get_last_lr()}")
 
-    approximator.load_state_dict(torch.load(model_name))
     # Main training loop
     for epoch in range(RESCUE_START, NUM_EPOCH):
         # Training
