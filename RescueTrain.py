@@ -31,8 +31,8 @@ def lock_random(luckySeed):
 # Model parameters
 TARGET_NUM = 5
 TRANS_OUT_NUM = 16
-TRANS_OUT_DIM = 128
-HIDDEN_DIM = (128 // TARGET_NUM) * TARGET_NUM
+TRANS_OUT_DIM = 120
+HIDDEN_DIM = 120
 DROP_OUT = 0
 USE_SAB = True
 USE_RES = True
