@@ -31,8 +31,8 @@ def lock_random(luckySeed):
 # Model parameters
 TARGET_NUM = 5
 TRANS_OUT_NUM = 16
-TRANS_OUT_DIM = 120
-HIDDEN_DIM = 120
+TRANS_OUT_DIM = 240
+HIDDEN_DIM = 240
 DROP_OUT = 0
 USE_SAB = True
 USE_RES = True
@@ -56,7 +56,7 @@ DEVICE = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
 MODEL = 0
 
-RESCUE_START = 121
+RESCUE_START = 61
 if __name__ == "__main__":
     lock_random(LUCKY_SEED)
 
@@ -99,14 +99,13 @@ if __name__ == "__main__":
             dropOut=DROP_OUT
         ).to(DEVICE)
 
-    model_name = "./models/Zero_TransOut16_TARGET_NUM5_TRANS_OUT_NUM16_TRANS_OUT_DIM128_HIDDEN_DIM125_ACTIVATIONReLU_FC8_ResTrue_BNTrueCLR.ckpt"
+    model_name = "./models/Zero_TransOut16_TARGET_NUM5_TRANS_OUT_NUM16_TRANS_OUT_DIM240_HIDDEN_DIM240_ACTIVATIONReLU_FC8_ResTrue_BNTrue.ckpt"
     approximator.load_state_dict(torch.load(model_name))
     criterion = MLSEloss()
-    optimizer = torch.optim.AdamW(approximator.parameters(), lr=15 * LEARNING_RATE)
+    optimizer = torch.optim.AdamW(approximator.parameters(), lr=15*LEARNING_RATE)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
         optimizer=optimizer,
-        T_0=2, T_mult=2,
-        eta_min=LEARNING_RATE / 2
+        T_0=2, T_mult=2
     )
 
     result_name = model_name + '.rst.txt'

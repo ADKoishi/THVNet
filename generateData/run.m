@@ -11,10 +11,10 @@
 % -----------train-------------------
 target          = 'train';
 data_num        = 100; %每个solution set包含的解的数量
-dataset_num     = 100000; %一共有这么多solution set
+dataset_num     = 1000000; %一共有这么多solution set
 num_on_triPF    = 0;     % 这么多solution set从triangular PF上生成
 num_on_invtriPF = 0;     % 这么多solution set从inverted triangular PF上生成
-num_on_random   = 100000; % 这么多solution set random 生成后选取适当多的non-dominated point
+num_on_random   = 1000000; % 这么多solution set random 生成后选取适当多的non-dominated point
 % -----------train-------------------
 
 % % -----------train-------------------
@@ -34,31 +34,6 @@ num_on_random   = 100000; % 这么多solution set random 生成后选取适当�
 % num_on_invtriPF = 0;     % 这么多solution set从inverted triangular PF上生成
 % num_on_random   = 10000; % 这么多solution set random 生成后选取适当多的non-dominated point
 % % -----------test-------------------
-
-M = 5; %目标个数
-seeds = 3:5;   % 
-
-for seed=seeds
-    r = 1;
-    Data = ones(dataset_num,data_num,M)*nan;
-    HVval = zeros(dataset_num,1);
-    % generate solution set and HVC
-    Data = generateTrainingData(M,Data,data_num,num_on_triPF,num_on_invtriPF,num_on_random,seed);
-    %Data(1,1,1)
-    rng('shuffle');
-    for i=1:dataset_num
-        if mod(i, 10000) == 0
-            disp(['HVcal, i=',num2str(i),'/',num2str(dataset_num)]);
-            toc
-        end
-        data = Data(i,:,:);
-        data = data(1,~isnan(data(1,:,1)),:);
-        %b=Data(~isnan(a(:,1)),:);
-        HVval(i,1) = HV(data,r);  
-    end
-    %保存数据，Data是solution sets，HVval是对应的hypervolume值
-    save(['../Datasets/Short/', target, '_data_M', num2str(M), '_', num2str(seed), '.mat'],'Data','HVval');
-end
 
 M = 8; %目标个数
 seeds = 3:5;   % 
