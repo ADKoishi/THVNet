@@ -57,5 +57,5 @@ for seed=seeds
         HVval(i,1) = HV(data,r);  
     end
     %保存数据，Data是solution sets，HVval是对应的hypervolume值
-    save(['../Datasets/', target, '_data_M', num2str(M), '_', num2str(seed), '.mat'],'Data','HVval');
+    save(['../Datasets/', target, '_data_M', num2str(M), '_', num2str(seed), '.mat'],'Data','HVval', '-v7.3');
 end

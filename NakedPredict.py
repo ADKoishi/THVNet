@@ -14,10 +14,10 @@ from Utils.HVDataLoader import HVDataset
 from tqdm import tqdm
 
 # Model parameters
-TARGET_NUM = 5
+TARGET_NUM = 3
 TRANS_OUT_NUM = 16
-TRANS_OUT_DIM = 70
-HIDDEN_DIM = (65 // TARGET_NUM) * TARGET_NUM
+TRANS_OUT_DIM = 240
+HIDDEN_DIM = (240 // TARGET_NUM) * TARGET_NUM
 DROP_OUT = 0
 USE_SAB = True
 USE_RES = True
@@ -26,16 +26,15 @@ COSINE_ANNEALING = True
 ACTIVATION = "ReLU"
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 4
+FORWARD_LAYERS = 8
 
 # Training parameters for Res version
 LAYER_DEPTH = 6
 
 # Training parameters
 LUCKY_SEED = 114514
-BATCH_SIZE = 10000
+BATCH_SIZE = 200
 DEVICE = 'cuda:0' if torch.cuda.is_available() else 'cpu'
-
 MODEL = 0
 
 if __name__ == "__main__":
@@ -70,7 +69,7 @@ if __name__ == "__main__":
             dropOut=DROP_OUT
         ).to(DEVICE)
 
-    model_name = "./models/Zero_TransOut16_TARGET_NUM5_TRANS_OUT_NUM16_TRANS_OUT_DIM70_HIDDEN_DIM65_ACTIVATIONReLU_FC4_ResTrue_BNTrue.ckpt"
+    model_name = "./models/Zero_TransOut16_TARGET_NUM3_TRANS_OUT_NUM16_TRANS_OUT_DIM240_HIDDEN_DIM240_ACTIVATIONReLU_FC8_ResTrue_BNTrue.ckpt"
 
     # Prediction
     testSet = HVDataset(dataDir="./Datasets", objectNum=TARGET_NUM, seeds=[5])

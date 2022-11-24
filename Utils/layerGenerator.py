@@ -15,6 +15,7 @@ def getTransformLayer(forwardDim, batchNorm):
     if batchNorm:
         transformLayer.append(
             nn.BatchNorm1d(forwardDim)
+            # nn.LayerNorm(forwardDim)
         )
 
     return transformLayer

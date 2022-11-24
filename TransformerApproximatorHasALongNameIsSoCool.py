@@ -29,11 +29,10 @@ def lock_random(luckySeed):
 
 
 # Model parameters
-TARGET_NUM = 3
+TARGET_NUM = 5
 TRANS_OUT_NUM = 16
-TRANS_OUT_DIM = 240
-HIDDEN_DIM = (240 // TARGET_NUM) * TARGET_NUM
-DROP_OUT = 0
+TRANS_OUT_DIM = 128
+HIDDEN_DIM = (128 // TARGET_NUM) * TARGET_NUM
 USE_SAB = True
 USE_RES = True
 USE_BATCH_NORM = True
@@ -78,37 +77,7 @@ if __name__ == "__main__":
             useSAB=USE_SAB,
             forwardLayers=FORWARD_LAYERS,
             resOn=USE_RES,
-            batchNorm=USE_BATCH_NORM,
-            dropOut=DROP_OUT
-        ).to(DEVICE)
-    if MODEL == 1:
-        approximator = ApproximaNetRes(
-            transInputDim=TARGET_NUM,
-            transNHead=TARGET_NUM,
-            transOutputNum=TRANS_OUT_NUM,
-            transOutputDim=TRANS_OUT_DIM,
-            hiddenDim=HIDDEN_DIM,
-            useSAB=USE_SAB,
-            fullForwardLayers=LAYER_DEPTH,
-            halfForwardLayers=LAYER_DEPTH,
-            quarterForwardLayers=LAYER_DEPTH,
-            eightForwardLayers=LAYER_DEPTH,
-            resOn=USE_RES,
-            batchNorm=USE_BATCH_NORM,
-            dropOut=DROP_OUT
-        ).to(DEVICE)
-    if MODEL == 2:
-        approximator = ApproximaNetMA(
-            transInputDim=TARGET_NUM,
-            transNHead=TARGET_NUM,
-            transOutputNum=TRANS_OUT_NUM,
-            transOutputDim=TRANS_OUT_DIM,
-            hiddenDim=HIDDEN_DIM,
-            useSAB=USE_SAB,
-            forwardLayers=FORWARD_LAYERS,
-            resOn=USE_RES,
-            batchNorm=USE_BATCH_NORM,
-            dropOut=DROP_OUT
+            batchNorm=USE_BATCH_NORM
         ).to(DEVICE)
 
     criterion = MLSEloss()
@@ -118,16 +87,6 @@ if __name__ == "__main__":
         optimizer=optimizer,
         T_0=2, T_mult=2
     )
-
-    # scheduler = torch.optim.lr_scheduler.OneCycleLR(
-    #     optimizer=optimizer,
-    #     max_lr=15*LEARNING_RATE,
-    #     total_steps=NUM_EPOCH*len(trainDataLoader),
-    #     pct_start=0.25,
-    #     div_factor=30,
-    #     cycle_momentum=True,
-    #     three_phase=True
-    # )
 
     def getModelName():
         if MODEL == 0:
@@ -148,7 +107,7 @@ if __name__ == "__main__":
         f"ACTIVATION{ACTIVATION}_"\
         f"FC{FORWARD_LAYERS}_" \
         f"Res{USE_RES}_" \
-        f"BN{USE_BATCH_NORM}.ckpt"
+        f"BN{USE_BATCH_NORM}_LAYER_NORM.ckpt"
     result_name = model_name + '.rst.txt'
 
     # Main training loop

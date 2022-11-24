@@ -82,22 +82,6 @@ if __name__ == "__main__":
             batchNorm=USE_BATCH_NORM,
             dropOut=DROP_OUT
         ).to(DEVICE)
-    else:
-        approximator = ApproximaNetRes(
-            transInputDim=TARGET_NUM,
-            transNHead=TARGET_NUM,
-            transOutputNum=TRANS_OUT_NUM,
-            transOutputDim=TRANS_OUT_DIM,
-            hiddenDim=HIDDEN_DIM,
-            useSAB=USE_SAB,
-            fullForwardLayers=LAYER_DEPTH,
-            halfForwardLayers=LAYER_DEPTH,
-            quarterForwardLayers=LAYER_DEPTH,
-            eightForwardLayers=LAYER_DEPTH,
-            resOn=USE_RES,
-            batchNorm=USE_BATCH_NORM,
-            dropOut=DROP_OUT
-        ).to(DEVICE)
 
     model_name = "./models/Zero_TransOut16_TARGET_NUM5_TRANS_OUT_NUM16_TRANS_OUT_DIM240_HIDDEN_DIM240_ACTIVATIONReLU_FC8_ResTrue_BNTrue.ckpt"
     approximator.load_state_dict(torch.load(model_name))

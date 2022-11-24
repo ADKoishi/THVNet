@@ -31,7 +31,7 @@ class DeepSet(nn.Module):
 
 class SetTransformer(nn.Module):
     def __init__(self, dim_input, num_outputs, dim_output, use_sab=False,
-                 num_inds=32, dim_hidden=128, num_heads=4, ln=False):
+                 num_inds=32, dim_hidden=128, num_heads=4, ln=True):
         super(SetTransformer, self).__init__()
 
         if not use_sab:
