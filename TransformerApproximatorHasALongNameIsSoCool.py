@@ -5,8 +5,6 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
-from ApproxinetMA import ApproximaNetMA
-from ApproxinetRes import ApproximaNetRes
 from ApproxinetZero import ApproximaNetZero
 
 from Loss import MLSEloss, PCTLoss
@@ -31,23 +29,19 @@ def lock_random(luckySeed):
 # Model parameters
 TARGET_NUM = 5
 TRANS_OUT_NUM = 16
-TRANS_OUT_DIM = 128
-HIDDEN_DIM = (128 // TARGET_NUM) * TARGET_NUM
+TRANS_OUT_DIM = 256
+HIDDEN_DIM = 256
 USE_SAB = True
 USE_RES = True
-USE_BATCH_NORM = False
+USE_BATCH_NORM = True
 COSINE_ANNEALING = True
-ACTIVATION = "ReLU"
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 8
-
-# Training parameters for Res version
-LAYER_DEPTH = 2
+FORWARD_LAYERS = 4
 
 # Training parameters
 LUCKY_SEED = 114514
-NUM_EPOCH = 254
+NUM_EPOCH = 126
 TRAIN_PROPORTION = 0.9
 LEARNING_RATE = 1e-5
 BATCH_SIZE = 200
@@ -70,7 +64,6 @@ if __name__ == "__main__":
     if MODEL == 0:
         approximator = ApproximaNetZero(
             transInputDim=TARGET_NUM,
-            transNHead=TARGET_NUM,
             transOutputNum=TRANS_OUT_NUM,
             transOutputDim=TRANS_OUT_DIM,
             hiddenDim=HIDDEN_DIM,
@@ -99,15 +92,13 @@ if __name__ == "__main__":
     model_name = \
         f"./models/" \
         f"{getModelName()}_" \
-        f"TransOut{TRANS_OUT_NUM}_" \
         f"TARGET_NUM{TARGET_NUM}_"\
         f"TRANS_OUT_NUM{TRANS_OUT_NUM}_"\
         f"TRANS_OUT_DIM{TRANS_OUT_DIM}_"\
         f"HIDDEN_DIM{HIDDEN_DIM}_"\
-        f"ACTIVATION{ACTIVATION}_"\
         f"FC{FORWARD_LAYERS}_" \
         f"Res{USE_RES}_" \
-        f"BN{USE_BATCH_NORM}_LAYER_NORM.ckpt"
+        f"BN{USE_BATCH_NORM}.ckpt"
     result_name = model_name + '.rst.txt'
 
     # Main training loop

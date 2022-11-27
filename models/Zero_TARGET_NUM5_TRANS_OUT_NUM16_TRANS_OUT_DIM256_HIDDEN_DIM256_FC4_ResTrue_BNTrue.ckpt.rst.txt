@@ -1,0 +1,12 @@
+now_epoch=0, loss=0.009604865685105324, average_epoch_loss=0.10322141816544657, mode=training, learning_rate=[0.00015000000000000001]
+now_epoch=0, loss=0.18962836265563965, average_epoch_loss=0.1681557512357831, mode=validation
+Model in Epoch 0 Saved! With Average Validation Loss: 0.1681557512357831
+now_epoch=1, loss=0.0037737563252449036, average_epoch_loss=0.016368352017649968, mode=training, learning_rate=[7.500000000000001e-05]
+now_epoch=1, loss=0.020841525867581367, average_epoch_loss=0.03360334818810225, mode=validation
+Model in Epoch 1 Saved! With Average Validation Loss: 0.03360334818810225
+now_epoch=2, loss=0.0056829568929970264, average_epoch_loss=0.015922567771592486, mode=training, learning_rate=[0.00015000000000000001]
+now_epoch=2, loss=0.009523632004857063, average_epoch_loss=0.01418646314018406, mode=validation
+Model in Epoch 2 Saved! With Average Validation Loss: 0.01418646314018406
+now_epoch=3, loss=0.009907362051308155, average_epoch_loss=0.0106442882488223, mode=training, learning_rate=[0.00012803300858899106]
+now_epoch=3, loss=0.004900864791125059, average_epoch_loss=0.008445549816126004, mode=validation
+Model in Epoch 3 Saved! With Average Validation Loss: 0.008445549816126004
