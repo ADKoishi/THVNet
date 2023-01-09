@@ -8,7 +8,7 @@ from setTransformer.models import SetTransformer
 class ApproximaNetZero(nn.Module):
     def __init__(
             self, transInputDim, transNHead=4, hiddenDim=128, transOutputDim=128, transOutputNum=1,
-            useSAB=False, ISABInds=32,
+            useSAB=False, ISABInds=16,
             forwardLayers=8, resOn=False, batchNorm=False, dropOut=0.0
     ):
         super(ApproximaNetZero, self).__init__()
@@ -16,9 +16,9 @@ class ApproximaNetZero(nn.Module):
         self.forwardLayers = forwardLayers
         self.resOn = resOn
 
-        if self.forwardLayers % 2 != 0 and self.resOn:
-            self.resOn = False
-            print("ResNet enabled but with odd forward layers, automatically disabled ResNet forward")
+        # if self.forwardLayers % 2 != 0 and self.resOn:
+        #     self.resOn = False
+        #     print("ResNet enabled but with odd forward layers, automatically disabled ResNet forward")
 
         self.encoder = SetTransformer(
             dim_input=transInputDim,

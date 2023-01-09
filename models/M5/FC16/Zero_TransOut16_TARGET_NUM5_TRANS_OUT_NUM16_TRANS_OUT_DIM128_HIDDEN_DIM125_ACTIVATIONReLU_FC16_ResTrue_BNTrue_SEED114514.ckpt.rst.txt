@@ -266,8 +266,6 @@ now_epoch=123, loss=0.00028667383594438434, average_epoch_loss=0.000562785598195
 now_epoch=123, loss=0.00031706568552181125, average_epoch_loss=0.0006369147286459338, mode=validation
 now_epoch=124, loss=0.0004157453658990562, average_epoch_loss=0.0005482053423361827, mode=training, learning_rate=[5.349107316265731e-06]
 now_epoch=124, loss=0.00043512939009815454, average_epoch_loss=0.0007434462903329405, mode=validation
-0.014832227741926909
-Resume Training, scheduler recovered. Latest learning rate: [5.087329425125001e-06]
 now_epoch=125, loss=0.0003171946154907346, average_epoch_loss=0.0006453925486291862, mode=training, learning_rate=[5.087329425125001e-06]
 now_epoch=125, loss=0.0004487477126531303, average_epoch_loss=0.0006250179348426172, mode=validation
 Model in Epoch 125 Saved! With Average Validation Loss: 0.0006250179348426172

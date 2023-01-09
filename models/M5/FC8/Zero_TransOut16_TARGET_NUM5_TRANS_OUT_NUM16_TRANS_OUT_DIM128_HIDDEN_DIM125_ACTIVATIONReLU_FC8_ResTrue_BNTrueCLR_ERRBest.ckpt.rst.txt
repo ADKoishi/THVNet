@@ -259,21 +259,6 @@ now_epoch=119, loss=0.0002569017233327031, average_epoch_loss=0.0005935665985452
 now_epoch=120, loss=0.0002813545288518071, average_epoch_loss=0.000517293786246834, mode=training, learning_rate=[8.12182565941486e-06]
 now_epoch=120, loss=0.0002242979098809883, average_epoch_loss=0.0005375802904745797, mode=validation
 Model in Epoch 120 Saved! With Average Validation Loss: 0.0005375802904745797
-now_epoch=121, loss=0.00038943879189901054, average_epoch_loss=0.000500803199798813, mode=training, learning_rate=[7.1727341433955625e-06]
-now_epoch=121, loss=0.0031334927771240473, average_epoch_loss=0.0005600418382819043, mode=validation
-now_epoch=122, loss=0.0003393664082977921, average_epoch_loss=0.00048324492355944433, mode=training, learning_rate=[6.393067170765794e-06]
-now_epoch=122, loss=0.0002718574833124876, average_epoch_loss=0.0005817435029603075, mode=validation
-now_epoch=123, loss=0.00019624430569820106, average_epoch_loss=0.00046224720589735726, mode=training, learning_rate=[5.784703027553377e-06]
-now_epoch=123, loss=0.002810050966218114, average_epoch_loss=0.0005715864359226543, mode=validation
-now_epoch=124, loss=0.00022259641264099628, average_epoch_loss=0.00045685596701514444, mode=training, learning_rate=[5.349107316265731e-06]
-now_epoch=124, loss=0.00028586440021172166, average_epoch_loss=0.0005425697284663328, mode=validation
-now_epoch=125, loss=0.00033960971632041037, average_epoch_loss=0.0004540840556744822, mode=training, learning_rate=[5.087329425125001e-06]
-now_epoch=125, loss=0.0002646055945660919, average_epoch_loss=0.0006491420240490697, mode=validation
-0.012299794016778469
-
-Resume Training, scheduler recovered. Latest learning rate: [7.1727341433955625e-06]
-
-Resume Training, scheduler recovered. Latest learning rate: [7.1727341433955625e-06]
 now_epoch=121, loss=0.0002214874402852729, average_epoch_loss=0.0004929154032223677, mode=training, learning_rate=[7.1727341433955625e-06]
 now_epoch=121, loss=0.0002662946644704789, average_epoch_loss=0.000490854111907538, mode=validation
 Model in Epoch 121 Saved! With Average Validation Loss: 0.000490854111907538

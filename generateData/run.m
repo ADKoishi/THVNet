@@ -11,10 +11,10 @@
 % -----------train-------------------
 target          = 'train';
 data_num        = 100; %每个solution set包含的解的数量
-dataset_num     = 1000000; %一共有这么多solution set
+dataset_num     = 10000; %一共有这么多solution set
 num_on_triPF    = 0;     % 这么多solution set从triangular PF上生成
 num_on_invtriPF = 0;     % 这么多solution set从inverted triangular PF上生成
-num_on_random   = 1000000; % 这么多solution set random 生成后选取适当多的non-dominated point
+num_on_random   = 10000; % 这么多solution set random 生成后选取适当多的non-dominated point
 % -----------train-------------------
 
 % % -----------train-------------------
@@ -29,14 +29,14 @@ num_on_random   = 1000000; % 这么多solution set random 生成后选取适当�
 % % -----------test-------------------
 % target          = 'train';
 % data_num        = 100; %每个solution set包含的解的数量
-% dataset_num     = 10000; %一共有这么多solution set
+% dataset_num     = 400000; %一共有这么多solution set
 % num_on_triPF    = 0;     % 这么多solution set从triangular PF上生成
 % num_on_invtriPF = 0;     % 这么多solution set从inverted triangular PF上生成
 % num_on_random   = 10000; % 这么多solution set random 生成后选取适当多的non-dominated point
 % % -----------test-------------------
 
-M = 8; %目标个数
-seeds = 3:5;   % 
+M = 5; %目标个数
+seeds = 5:5;   % 
 
 for seed=seeds
     r = 1;
@@ -57,5 +57,5 @@ for seed=seeds
         HVval(i,1) = HV(data,r);  
     end
     %保存数据，Data是solution sets，HVval是对应的hypervolume值
-    save(['../Datasets/', target, '_data_M', num2str(M), '_', num2str(seed), '.mat'],'Data','HVval', '-v7.3');
+    save(['../Datasets/NAS/', target, '_data_M', num2str(M), '_', num2str(seed), '.mat'],'Data','HVval', '-v7.3');
 end

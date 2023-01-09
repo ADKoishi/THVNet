@@ -6,6 +6,7 @@ import torch
 from torch.utils.data import DataLoader
 
 from ApproxinetZero import ApproximaNetZero
+from HVNet import HVNet
 
 from Loss import MLSEloss, PCTLoss
 
@@ -29,15 +30,15 @@ def lock_random(luckySeed):
 # Model parameters
 TARGET_NUM = 5
 TRANS_OUT_NUM = 16
-TRANS_OUT_DIM = 256
-HIDDEN_DIM = 256
-USE_SAB = True
+TRANS_OUT_DIM = 128
+HIDDEN_DIM = 128
+USE_SAB = False
 USE_RES = True
-USE_BATCH_NORM = True
+USE_BATCH_NORM = False
 COSINE_ANNEALING = True
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 4
+FORWARD_LAYERS = 1
 
 # Training parameters
 LUCKY_SEED = 114514
@@ -45,6 +46,7 @@ NUM_EPOCH = 126
 TRAIN_PROPORTION = 0.9
 LEARNING_RATE = 1e-5
 BATCH_SIZE = 200
+MERGE = False
 DEVICE = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
 MODEL = 0
@@ -57,7 +59,9 @@ if __name__ == "__main__":
         workerNum=4,
         objectNum=TARGET_NUM,
         trainProportion=TRAIN_PROPORTION,
-        seeds=[3, 4]
+        seeds=[3, 4],
+        merge=MERGE,
+        mergedPath="./Datasets/merged_data.mat"
     )
 
     print("Device Found, Named", DEVICE)
@@ -72,6 +76,14 @@ if __name__ == "__main__":
             resOn=USE_RES,
             batchNorm=USE_BATCH_NORM
         ).to(DEVICE)
+    if MODEL == 1:
+        approximator = HVNet(
+            hidden_dim=HIDDEN_DIM,
+            input_dim=TARGET_NUM,
+            encoder_layers=FORWARD_LAYERS,
+            decoder_layers=FORWARD_LAYERS,
+            res_on=USE_RES
+        ).to(DEVICE)
 
     criterion = MLSEloss()
 
@@ -85,20 +97,29 @@ if __name__ == "__main__":
         if MODEL == 0:
             return "Zero"
         if MODEL == 1:
-            return "Res"
-        if MODEL == 2:
-            return "MA"
-
-    model_name = \
-        f"./models/" \
-        f"{getModelName()}_" \
-        f"TARGET_NUM{TARGET_NUM}_"\
-        f"TRANS_OUT_NUM{TRANS_OUT_NUM}_"\
-        f"TRANS_OUT_DIM{TRANS_OUT_DIM}_"\
-        f"HIDDEN_DIM{HIDDEN_DIM}_"\
-        f"FC{FORWARD_LAYERS}_" \
-        f"Res{USE_RES}_" \
-        f"BN{USE_BATCH_NORM}.ckpt"
+            return "HVNet"
+    if MODEL == 0:
+        model_name = \
+            f"./models/" \
+            f"Zero_" \
+            f"MERGE_{MERGE}" \
+            f"USE_SAB{USE_SAB}_"\
+            f"TARGET_NUM{TARGET_NUM}_"\
+            f"TRANS_OUT_NUM{TRANS_OUT_NUM}_"\
+            f"TRANS_OUT_DIM{TRANS_OUT_DIM}_"\
+            f"HIDDEN_DIM{HIDDEN_DIM}_"\
+            f"FC{FORWARD_LAYERS}_" \
+            f"Res{USE_RES}_" \
+            f"BN{USE_BATCH_NORM}.ckpt"
+    if MODEL == 1:
+        model_name = \
+            f"./models/" \
+            f"HVNet_" \
+            f"TARGET_NUM{TARGET_NUM}_"\
+            f"HIDDEN_DIM{HIDDEN_DIM}_"\
+            f"FC{FORWARD_LAYERS}_" \
+            f"Res{USE_RES}" \
+            f".ckpt"
     result_name = model_name + '.rst.txt'
 
     # Main training loop

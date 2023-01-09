@@ -39,6 +39,17 @@ class HVDataset(Dataset):
     def __getitem__(self, index):
         return self.data[index], self.labels[index]
 
+class MeregedDataset(Dataset):
+    def __init__(self, path):
+        datafile = h5py.File(path, 'r')
+        self.data = torch.FloatTensor(np.array(datafile['Data']))
+        self.labels = torch.FloatTensor(np.array(datafile['HVval']))
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, index):
+        return self.data[index], self.labels[index]
 
 def getDataLoader(
         batchSize,
@@ -46,9 +57,14 @@ def getDataLoader(
         objectNum,
         trainProportion=0.9,
         dataDir="./Datasets",
-        seeds=(3, 4, 5)
+        seeds=(3, 4, 5),
+        merge=False,
+        mergedPath = "./Datasets/merged_data.mat"
 ):
-    fullDataset = HVDataset(dataDir=dataDir, objectNum=objectNum, seeds=seeds)
+    if not merge:
+        fullDataset = HVDataset(dataDir=dataDir, objectNum=objectNum, seeds=seeds)
+    else:
+        fullDataset = MeregedDataset(path=mergedPath)
     trainLen = int(trainProportion * len(fullDataset))
     validLen = len(fullDataset) - trainLen
     trainSet, validSet = random_split(fullDataset, [trainLen, validLen])

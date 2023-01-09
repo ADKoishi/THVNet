@@ -1,4 +1,5 @@
 import random
+import time
 
 import numpy as np
 import torch
@@ -6,6 +7,7 @@ from torch.utils.data import DataLoader
 
 from ApproxinetRes import ApproximaNetRes
 from ApproxinetZero import ApproximaNetZero
+from HVNet import HVNet
 
 from Loss import PCTLoss
 
@@ -15,18 +17,16 @@ from tqdm import tqdm
 
 # Model parameters
 TARGET_NUM = 5
-TRANS_OUT_NUM = 1
-TRANS_OUT_DIM = 1
-HIDDEN_DIM = 256
-DROP_OUT = 0
-USE_SAB = True
+TRANS_OUT_NUM = 16
+TRANS_OUT_DIM = 64
+HIDDEN_DIM = 64
+USE_SAB = False
 USE_RES = True
-USE_BATCH_NORM = True
+USE_BATCH_NORM = False
 COSINE_ANNEALING = True
-ACTIVATION = "ReLU"
 
 # Training parameters for Normal version
-FORWARD_LAYERS = 0
+FORWARD_LAYERS = 4
 
 # Training parameters for Res version
 LAYER_DEPTH = 6
@@ -49,26 +49,18 @@ if __name__ == "__main__":
             forwardLayers=FORWARD_LAYERS,
             resOn=USE_RES,
             batchNorm=USE_BATCH_NORM,
-            dropOut=DROP_OUT
         ).to(DEVICE)
-    else:
-        approximator = ApproximaNetRes(
-            transInputDim=TARGET_NUM,
-            transNHead=TARGET_NUM,
-            transOutputNum=TRANS_OUT_NUM,
-            transOutputDim=TRANS_OUT_DIM,
-            hiddenDim=HIDDEN_DIM,
-            useSAB=USE_SAB,
-            fullForwardLayers=LAYER_DEPTH,
-            halfForwardLayers=LAYER_DEPTH,
-            quarterForwardLayers=LAYER_DEPTH,
-            eightForwardLayers=LAYER_DEPTH,
-            resOn=USE_RES,
-            batchNorm=USE_BATCH_NORM,
-            dropOut=DROP_OUT
+    if MODEL == 1:
+        approximator = HVNet(
+            hidden_dim=HIDDEN_DIM,
+            input_dim=TARGET_NUM,
+            encoder_layers=FORWARD_LAYERS,
+            decoder_layers=FORWARD_LAYERS,
+            res_on=USE_RES
         ).to(DEVICE)
 
-    model_name = "./models/Zero_TARGET_NUM5_TRANS_OUT_NUM1_TRANS_OUT_DIM1_HIDDEN_DIM256_FC0_ResTrue_BNTrue.ckpt"
+
+    model_name = "models/Zero_USE_SABFalse_TARGET_NUM5_TRANS_OUT_NUM16_TRANS_OUT_DIM64_HIDDEN_DIM64_FC4_ResTrue_BNFalse.ckpt"
 
     # Prediction
     testSet = HVDataset(dataDir="./Datasets/Short", objectNum=TARGET_NUM, seeds=[5])
@@ -78,17 +70,18 @@ if __name__ == "__main__":
         batch_size=BATCH_SIZE,
         shuffle=False,
         drop_last=True,
-        num_workers=1,
+        num_workers=6,
         pin_memory=True,
     )
 
-    approximator.load_state_dict(torch.load(model_name))
+    approximator.load_state_dict(torch.load(model_name, map_location='cuda:0'))
     approximator.eval()
 
     pbar = tqdm(testLoader)
     criterion = PCTLoss()
     accumulate_loss = 0
     batch_num = 0
+    start_time = time.time()
     for batch in pbar:
         batch_num += 1
         VS, HV = batch
@@ -103,3 +96,4 @@ if __name__ == "__main__":
             average_epoch_loss=accumulate_loss / batch_num,
             mode="testing"
         )
+    print(time.time() - start_time)

@@ -1,0 +1,292 @@
+2now_epoch=0, loss=0.08837758004665375, average_epoch_loss=0.1895778812919226, mode=training, learning_rate=[0.00015000000000000001]
+now_epoch=0, loss=0.05202421173453331, average_epoch_loss=0.06979949935153126, mode=validation
+Model in Epoch 0 Saved! With Average Validation Loss: 0.06979949935153126
+now_epoch=1, loss=0.038873594254255295, average_epoch_loss=0.06122096925746236, mode=training, learning_rate=[7.500000000000001e-05]
+now_epoch=1, loss=0.12316825240850449, average_epoch_loss=0.04882804462965578, mode=validation
+Model in Epoch 1 Saved! With Average Validation Loss: 0.04882804462965578
+now_epoch=2, loss=0.01294900756329298, average_epoch_loss=0.04585195634105346, mode=training, learning_rate=[0.00015000000000000001]
+now_epoch=2, loss=0.021953431889414787, average_epoch_loss=0.02346625895239413, mode=validation
+Model in Epoch 2 Saved! With Average Validation Loss: 0.02346625895239413
+now_epoch=3, loss=0.009934860281646252, average_epoch_loss=0.019159916624711414, mode=training, learning_rate=[0.00012803300858899106]
+now_epoch=3, loss=0.009829278104007244, average_epoch_loss=0.0229727166169323, mode=validation
+Model in Epoch 3 Saved! With Average Validation Loss: 0.0229727166169323
+now_epoch=4, loss=0.0036131988745182753, average_epoch_loss=0.011800271742045879, mode=training, learning_rate=[7.500000000000001e-05]
+now_epoch=4, loss=0.04938032850623131, average_epoch_loss=0.009698226337786765, mode=validation
+Model in Epoch 4 Saved! With Average Validation Loss: 0.009698226337786765
+now_epoch=5, loss=0.0030619101598858833, average_epoch_loss=0.008576297220670515, mode=training, learning_rate=[2.196699141100894e-05]
+now_epoch=5, loss=0.009090661071240902, average_epoch_loss=0.008617506564361974, mode=validation
+Model in Epoch 5 Saved! With Average Validation Loss: 0.008617506564361974
+now_epoch=6, loss=0.01976960338652134, average_epoch_loss=0.012764054543946662, mode=training, learning_rate=[0.00015000000000000001]
+now_epoch=6, loss=0.005427041091024876, average_epoch_loss=0.009190126022556797, mode=validation
+now_epoch=7, loss=0.008331438526511192, average_epoch_loss=0.011008469024039288, mode=training, learning_rate=[0.00014429096493834653]
+now_epoch=7, loss=0.00401126267388463, average_epoch_loss=0.007106163511169143, mode=validation
+Model in Epoch 7 Saved! With Average Validation Loss: 0.007106163511169143
+now_epoch=8, loss=0.009575587697327137, average_epoch_loss=0.009256285350640409, mode=training, learning_rate=[0.00012803300858899106]
+now_epoch=8, loss=0.004328412469476461, average_epoch_loss=0.006874283114331774, mode=validation
+Model in Epoch 8 Saved! With Average Validation Loss: 0.006874283114331774
+now_epoch=9, loss=0.003949427045881748, average_epoch_loss=0.00781318994709808, mode=training, learning_rate=[0.00010370125742738174]
+now_epoch=9, loss=0.00492706336081028, average_epoch_loss=0.00828135061240755, mode=validation
+now_epoch=10, loss=0.0026216234546154737, average_epoch_loss=0.006397822737803735, mode=training, learning_rate=[7.500000000000001e-05]
+now_epoch=10, loss=0.003389883553609252, average_epoch_loss=0.0049740121752256524, mode=validation
+Model in Epoch 10 Saved! With Average Validation Loss: 0.0049740121752256524
+now_epoch=11, loss=0.0013770988443866372, average_epoch_loss=0.005114693200526138, mode=training, learning_rate=[4.629874257261827e-05]
+now_epoch=11, loss=0.0023208248894661665, average_epoch_loss=0.004447001738590188, mode=validation
+Model in Epoch 11 Saved! With Average Validation Loss: 0.004447001738590188
+now_epoch=12, loss=0.003671852871775627, average_epoch_loss=0.004130131351185911, mode=training, learning_rate=[2.196699141100894e-05]
+now_epoch=12, loss=0.004564488306641579, average_epoch_loss=0.0038725739835062997, mode=validation
+Model in Epoch 12 Saved! With Average Validation Loss: 0.0038725739835062997
+now_epoch=13, loss=0.0010589029407128692, average_epoch_loss=0.003494478915882711, mode=training, learning_rate=[5.709035061653495e-06]
+now_epoch=13, loss=0.0028354718815535307, average_epoch_loss=0.0035290388576686383, mode=validation
+Model in Epoch 13 Saved! With Average Validation Loss: 0.0035290388576686383
+now_epoch=14, loss=0.007472648285329342, average_epoch_loss=0.0077267174565479055, mode=training, learning_rate=[0.00015000000000000001]
+now_epoch=14, loss=0.004833541344851255, average_epoch_loss=0.007806897971429862, mode=validation
+now_epoch=15, loss=0.00459749111905694, average_epoch_loss=0.007080789453556968, mode=training, learning_rate=[0.0001485588960302423]
+now_epoch=15, loss=0.0017138863913714886, average_epoch_loss=0.005490101147559471, mode=validation
+now_epoch=16, loss=0.0018008867045864463, average_epoch_loss=0.006453665501696782, mode=training, learning_rate=[0.00014429096493834653]
+now_epoch=16, loss=0.001177788246423006, average_epoch_loss=0.004691749917925336, mode=validation
+now_epoch=17, loss=0.0026012524031102657, average_epoch_loss=0.006065763463757725, mode=training, learning_rate=[0.00013736022092269092]
+now_epoch=17, loss=0.003833085298538208, average_epoch_loss=0.004968409011606127, mode=validation
+now_epoch=18, loss=0.0010834800777956843, average_epoch_loss=0.005595213014244412, mode=training, learning_rate=[0.00012803300858899106]
+now_epoch=18, loss=0.0012887978227809072, average_epoch_loss=0.003927841373952106, mode=validation
+now_epoch=19, loss=0.0016867705853655934, average_epoch_loss=0.0051738635175602714, mode=training, learning_rate=[0.00011666776747647018]
+now_epoch=19, loss=0.003690832993015647, average_epoch_loss=0.003813800219737459, mode=validation
+now_epoch=20, loss=0.0028856592252850533, average_epoch_loss=0.0046109103001524794, mode=training, learning_rate=[0.00010370125742738174]
+now_epoch=20, loss=0.0013888564426451921, average_epoch_loss=0.0039004221121431326, mode=validation
+now_epoch=21, loss=0.003173812758177519, average_epoch_loss=0.004214870814447446, mode=training, learning_rate=[8.963177415120965e-05]
+now_epoch=21, loss=0.0011212080717086792, average_epoch_loss=0.0034319571280502716, mode=validation
+Model in Epoch 21 Saved! With Average Validation Loss: 0.0034319571280502716
+now_epoch=22, loss=0.0008037026273086667, average_epoch_loss=0.0038051332128298883, mode=training, learning_rate=[7.500000000000001e-05]
+now_epoch=22, loss=0.0010366367641836405, average_epoch_loss=0.003051149386330508, mode=validation
+Model in Epoch 22 Saved! With Average Validation Loss: 0.003051149386330508
+now_epoch=23, loss=0.0008026233990676701, average_epoch_loss=0.0033236805856835822, mode=training, learning_rate=[6.036822584879039e-05]
+now_epoch=23, loss=0.0014569686027243733, average_epoch_loss=0.0029142847220646217, mode=validation
+Model in Epoch 23 Saved! With Average Validation Loss: 0.0029142847220646217
+now_epoch=24, loss=0.0018105716444551945, average_epoch_loss=0.0028927223583256516, mode=training, learning_rate=[4.629874257261827e-05]
+now_epoch=24, loss=0.0011094186920672655, average_epoch_loss=0.003462804738257546, mode=validation
+now_epoch=25, loss=0.0013722048606723547, average_epoch_loss=0.002590652427015205, mode=training, learning_rate=[3.3332232523529855e-05]
+now_epoch=25, loss=0.0016954822931438684, average_epoch_loss=0.0025069053329061716, mode=validation
+Model in Epoch 25 Saved! With Average Validation Loss: 0.0025069053329061716
+now_epoch=26, loss=0.000740165647584945, average_epoch_loss=0.0022081739778708046, mode=training, learning_rate=[2.196699141100894e-05]
+now_epoch=26, loss=0.001355013228021562, average_epoch_loss=0.0021159175843931733, mode=validation
+Model in Epoch 26 Saved! With Average Validation Loss: 0.0021159175843931733
+now_epoch=27, loss=0.0005723137874156237, average_epoch_loss=0.001957656602110041, mode=training, learning_rate=[1.26397790773091e-05]
+now_epoch=27, loss=0.0006590512930415571, average_epoch_loss=0.0018483026194153354, mode=validation
+Model in Epoch 27 Saved! With Average Validation Loss: 0.0018483026194153354
+now_epoch=28, loss=0.0012155246222391725, average_epoch_loss=0.0017481375055277669, mode=training, learning_rate=[5.709035061653495e-06]
+now_epoch=28, loss=0.0004754813271574676, average_epoch_loss=0.0017824228573590517, mode=validation
+Model in Epoch 28 Saved! With Average Validation Loss: 0.0017824228573590517
+now_epoch=29, loss=0.0009355043875984848, average_epoch_loss=0.001639521481381962, mode=training, learning_rate=[1.441103969757718e-06]
+now_epoch=29, loss=0.0008188916835933924, average_epoch_loss=0.0017231308978807648, mode=validation
+Model in Epoch 29 Saved! With Average Validation Loss: 0.0017231308978807648
+now_epoch=30, loss=0.03358287364244461, average_epoch_loss=0.005571643958126919, mode=training, learning_rate=[0.00015000000000000001]
+now_epoch=30, loss=0.004657292272895575, average_epoch_loss=0.005985770284431056, mode=validation
+now_epoch=31, loss=0.0029268215876072645, average_epoch_loss=0.005050859534485628, mode=training, learning_rate=[0.0001496388545004148]
+now_epoch=31, loss=0.0026792779099196196, average_epoch_loss=0.004055035469064023, mode=validation
+now_epoch=32, loss=0.0024091238155961037, average_epoch_loss=0.005056497133136468, mode=training, learning_rate=[0.0001485588960302423]
+now_epoch=32, loss=0.0023636696860194206, average_epoch_loss=0.0037658187195775098, mode=validation
+now_epoch=33, loss=0.0027314764447510242, average_epoch_loss=0.004747050418415003, mode=training, learning_rate=[0.00014677052517991568]
+now_epoch=33, loss=0.011858824640512466, average_epoch_loss=0.004839201932656579, mode=validation
+now_epoch=34, loss=0.004201794508844614, average_epoch_loss=0.004564444773636448, mode=training, learning_rate=[0.00014429096493834653]
+now_epoch=34, loss=0.005189995281398296, average_epoch_loss=0.006517499323235825, mode=validation
+now_epoch=35, loss=0.0011169518111273646, average_epoch_loss=0.00442774262347181, mode=training, learning_rate=[0.00014114409482612664]
+now_epoch=35, loss=0.0017610080540180206, average_epoch_loss=0.0027257256805023646, mode=validation
+now_epoch=36, loss=0.001241972204297781, average_epoch_loss=0.004237000783620816, mode=training, learning_rate=[0.00013736022092269092]
+now_epoch=36, loss=0.0017415221082046628, average_epoch_loss=0.003618102321808692, mode=validation
+now_epoch=37, loss=0.009455676190555096, average_epoch_loss=0.004138178132364475, mode=training, learning_rate=[0.00013297578400220527]
+now_epoch=37, loss=0.0010544129181653261, average_epoch_loss=0.0025139154024655, mode=validation
+now_epoch=38, loss=0.012050130404531956, average_epoch_loss=0.0039984152266277105, mode=training, learning_rate=[0.00012803300858899106]
+now_epoch=38, loss=0.0056090871803462505, average_epoch_loss=0.01055291914450936, mode=validation
+now_epoch=39, loss=0.0029233964160084724, average_epoch_loss=0.003793698469788069, mode=training, learning_rate=[0.00012257949631227342]
+now_epoch=39, loss=0.0033264111261814833, average_epoch_loss=0.00681202904577367, mode=validation
+now_epoch=40, loss=0.0013779508881270885, average_epoch_loss=0.0036437627263528863, mode=training, learning_rate=[0.00011666776747647018]
+now_epoch=40, loss=0.0016978960484266281, average_epoch_loss=0.0036279087853617964, mode=validation
+now_epoch=41, loss=0.0006156101590022445, average_epoch_loss=0.00353420040490649, mode=training, learning_rate=[0.00011035475526194986]
+now_epoch=41, loss=0.0013047935208305717, average_epoch_loss=0.0025897441301785877, mode=validation
+now_epoch=42, loss=0.0010403202613815665, average_epoch_loss=0.0033048136231890466, mode=training, learning_rate=[0.00010370125742738174]
+now_epoch=42, loss=0.001077239285223186, average_epoch_loss=0.002446211557427887, mode=validation
+now_epoch=43, loss=0.003141033463180065, average_epoch_loss=0.0032123303733727275, mode=training, learning_rate=[9.677135079408468e-05]
+now_epoch=43, loss=0.003989752847701311, average_epoch_loss=0.002333156877110014, mode=validation
+now_epoch=44, loss=0.009978087618947029, average_epoch_loss=0.002980985169056415, mode=training, learning_rate=[8.963177415120965e-05]
+now_epoch=44, loss=0.01398750301450491, average_epoch_loss=0.009203783112578095, mode=validation
+now_epoch=45, loss=0.0040397923439741135, average_epoch_loss=0.002878386485018483, mode=training, learning_rate=[8.235128552471707e-05]
+now_epoch=45, loss=0.0006360894185490906, average_epoch_loss=0.0019044855171814561, mode=validation
+now_epoch=46, loss=0.0026246123015880585, average_epoch_loss=0.002680548554538594, mode=training, learning_rate=[7.500000000000001e-05]
+now_epoch=46, loss=0.0007916256436146796, average_epoch_loss=0.002472869185352465, mode=validation
+now_epoch=47, loss=0.007104957941919565, average_epoch_loss=0.002508110236635225, mode=training, learning_rate=[6.764871447528296e-05]
+now_epoch=47, loss=0.0007452312856912613, average_epoch_loss=0.0025974713977484497, mode=validation
+now_epoch=48, loss=0.0007955643231980503, average_epoch_loss=0.0023315421118523874, mode=training, learning_rate=[6.036822584879039e-05]
+now_epoch=48, loss=0.001593050779774785, average_epoch_loss=0.0018745321434689686, mode=validation
+now_epoch=49, loss=0.005324234254658222, average_epoch_loss=0.0022182345130745992, mode=training, learning_rate=[5.3228649205915344e-05]
+now_epoch=49, loss=0.0007971991435624659, average_epoch_loss=0.001987514211330563, mode=validation
+now_epoch=50, loss=0.0010858699679374695, average_epoch_loss=0.0020812697473965172, mode=training, learning_rate=[4.629874257261827e-05]
+now_epoch=50, loss=0.0006532938568852842, average_epoch_loss=0.0019504714216163847, mode=validation
+now_epoch=51, loss=0.0008958707330748439, average_epoch_loss=0.0019001791375436975, mode=training, learning_rate=[3.9645244738050176e-05]
+now_epoch=51, loss=0.0009527297806926072, average_epoch_loss=0.0017667055136989802, mode=validation
+now_epoch=52, loss=0.0005521780694834888, average_epoch_loss=0.0017743122558879097, mode=training, learning_rate=[3.3332232523529855e-05]
+now_epoch=52, loss=0.0005136106628924608, average_epoch_loss=0.0015814952697546687, mode=validation
+Model in Epoch 52 Saved! With Average Validation Loss: 0.0015814952697546687
+now_epoch=53, loss=0.0012021019356325269, average_epoch_loss=0.0016235029664983611, mode=training, learning_rate=[2.74205036877266e-05]
+now_epoch=53, loss=0.0017277210718020797, average_epoch_loss=0.0018134859211859293, mode=validation
+now_epoch=54, loss=0.0010691562201827765, average_epoch_loss=0.0015016829427752076, mode=training, learning_rate=[2.196699141100894e-05]
+now_epoch=54, loss=0.0007127154967747629, average_epoch_loss=0.0014970340956933796, mode=validation
+Model in Epoch 54 Saved! With Average Validation Loss: 0.0014970340956933796
+now_epoch=55, loss=0.0014387693954631686, average_epoch_loss=0.0013684967651562247, mode=training, learning_rate=[1.702421599779473e-05]
+now_epoch=55, loss=0.0005261733895167708, average_epoch_loss=0.0015706860225182028, mode=validation
+now_epoch=56, loss=0.0007129806326702237, average_epoch_loss=0.0012668542548684247, mode=training, learning_rate=[1.26397790773091e-05]
+now_epoch=56, loss=0.0004548766592051834, average_epoch_loss=0.0013759737932996358, mode=validation
+Model in Epoch 56 Saved! With Average Validation Loss: 0.0013759737932996358
+now_epoch=57, loss=0.0008516152738593519, average_epoch_loss=0.0011810910924493026, mode=training, learning_rate=[8.85590517387338e-06]
+now_epoch=57, loss=0.0013607388827949762, average_epoch_loss=0.001169277563370997, mode=validation
+Model in Epoch 57 Saved! With Average Validation Loss: 0.001169277563370997
+now_epoch=58, loss=0.0005623385659419, average_epoch_loss=0.0010905339141350447, mode=training, learning_rate=[5.709035061653495e-06]
+now_epoch=58, loss=0.0004449005355127156, average_epoch_loss=0.0012185703436844051, mode=validation
+now_epoch=59, loss=0.0004538175999186933, average_epoch_loss=0.001046511231349238, mode=training, learning_rate=[3.2294748200843385e-06]
+now_epoch=59, loss=0.00043307000305503607, average_epoch_loss=0.0010956970770785118, mode=validation
+Model in Epoch 59 Saved! With Average Validation Loss: 0.0010956970770785118
+now_epoch=60, loss=0.0005193480174057186, average_epoch_loss=0.0009985141519217803, mode=training, learning_rate=[1.441103969757718e-06]
+now_epoch=60, loss=0.0006628329865634441, average_epoch_loss=0.0010870185545063579, mode=validation
+Model in Epoch 60 Saved! With Average Validation Loss: 0.0010870185545063579
+now_epoch=61, loss=0.00054064707364887, average_epoch_loss=0.0009780443852489245, mode=training, learning_rate=[3.611454995852387e-07]
+now_epoch=61, loss=0.0006185041856952012, average_epoch_loss=0.0010643583168275653, mode=validation
+Model in Epoch 61 Saved! With Average Validation Loss: 0.0010643583168275653
+now_epoch=62, loss=0.005940335802733898, average_epoch_loss=0.004328719359350443, mode=training, learning_rate=[0.00015000000000000001]
+now_epoch=62, loss=0.0014254918787628412, average_epoch_loss=0.00461987309763208, mode=validation
+now_epoch=63, loss=0.002065446926280856, average_epoch_loss=0.004083468387035989, mode=training, learning_rate=[0.00014990965921538794]
+now_epoch=63, loss=0.040686581283807755, average_epoch_loss=0.004245412000105716, mode=validation
+now_epoch=64, loss=0.0014618748100474477, average_epoch_loss=0.0038991852299142113, mode=training, learning_rate=[0.0001496388545004148]
+now_epoch=64, loss=0.0011051468318328261, average_epoch_loss=0.0025656686240108683, mode=validation
+now_epoch=65, loss=0.0021158098243176937, average_epoch_loss=0.0038319572273273175, mode=training, learning_rate=[0.0001491882382473586]
+now_epoch=65, loss=0.0011645645136013627, average_epoch_loss=0.003001971414894797, mode=validation
+now_epoch=66, loss=0.010076501406729221, average_epoch_loss=0.0038538516994902038, mode=training, learning_rate=[0.0001485588960302423]
+now_epoch=66, loss=0.0031781631987541914, average_epoch_loss=0.002957164919527713, mode=validation
+now_epoch=67, loss=0.0011430453741922975, average_epoch_loss=0.0038179433612159403, mode=training, learning_rate=[0.00014775234398959082]
+now_epoch=67, loss=0.0006405488820746541, average_epoch_loss=0.002377023317356361, mode=validation
+now_epoch=68, loss=0.0018564927158877254, average_epoch_loss=0.0037796276600210047, mode=training, learning_rate=[0.00014677052517991568]
+now_epoch=68, loss=0.019351385533809662, average_epoch_loss=0.002591130084590986, mode=validation
+now_epoch=69, loss=0.0023343858774751425, average_epoch_loss=0.003567504462792486, mode=training, learning_rate=[0.00014561580488872656]
+now_epoch=69, loss=0.005050827283412218, average_epoch_loss=0.0058038830051664264, mode=validation
+now_epoch=70, loss=0.02165299654006958, average_epoch_loss=0.003662418834024316, mode=training, learning_rate=[0.00014429096493834653]
+now_epoch=70, loss=0.0010086086113005877, average_epoch_loss=0.0026980622387491166, mode=validation
+now_epoch=71, loss=0.008297682739794254, average_epoch_loss=0.0036916336369306212, mode=training, learning_rate=[0.00014279919698425826]
+now_epoch=71, loss=0.0028546687681227922, average_epoch_loss=0.0028544504658784718, mode=validation
+now_epoch=72, loss=0.0012358904350548983, average_epoch_loss=0.0034938019597870558, mode=training, learning_rate=[0.00014114409482612664]
+now_epoch=72, loss=0.0008560552960261703, average_epoch_loss=0.003008725199266337, mode=validation
+now_epoch=73, loss=0.0015143068740144372, average_epoch_loss=0.003434537108515441, mode=training, learning_rate=[0.00013932964575002043]
+now_epoch=73, loss=0.0013008394744247198, average_epoch_loss=0.00269217678764835, mode=validation
+now_epoch=74, loss=0.013181646354496479, average_epoch_loss=0.0033794256568847533, mode=training, learning_rate=[0.00013736022092269092]
+now_epoch=74, loss=0.0010611199541017413, average_epoch_loss=0.004547752370825038, mode=validation
+now_epoch=75, loss=0.004494569730013609, average_epoch_loss=0.003451835803739313, mode=training, learning_rate=[0.00013524056486104838]
+now_epoch=75, loss=0.00460336497053504, average_epoch_loss=0.006987078974721953, mode=validation
+now_epoch=76, loss=0.0015658927150070667, average_epoch_loss=0.003272238464595931, mode=training, learning_rate=[0.00013297578400220527]
+now_epoch=76, loss=0.002032516524195671, average_epoch_loss=0.003211950670927763, mode=validation
+now_epoch=77, loss=0.0014328595716506243, average_epoch_loss=0.0031760083850531375, mode=training, learning_rate=[0.00013057133440162196]
+now_epoch=77, loss=0.001766508212313056, average_epoch_loss=0.0023852648150059393, mode=validation
+now_epoch=78, loss=0.0008697087760083377, average_epoch_loss=0.0032183175858517643, mode=training, learning_rate=[0.00012803300858899106]
+now_epoch=78, loss=0.001403787755407393, average_epoch_loss=0.003011935138492845, mode=validation
+now_epoch=79, loss=0.002020119456574321, average_epoch_loss=0.00307502999203603, mode=training, learning_rate=[0.0001253669216135264]
+now_epoch=79, loss=0.0017977720126509666, average_epoch_loss=0.003037413437035866, mode=validation
+now_epoch=80, loss=0.001323671662248671, average_epoch_loss=0.0029671912180395644, mode=training, learning_rate=[0.00012257949631227342]
+now_epoch=80, loss=0.0018701724475249648, average_epoch_loss=0.003910853559733369, mode=validation
+now_epoch=81, loss=0.0006877363775856793, average_epoch_loss=0.002986319795260594, mode=training, learning_rate=[0.00011967744783693252]
+now_epoch=81, loss=0.0008037429652176797, average_epoch_loss=0.0019632794714416375, mode=validation
+now_epoch=82, loss=0.000714051362592727, average_epoch_loss=0.0030044315843681235, mode=training, learning_rate=[0.00011666776747647018]
+now_epoch=82, loss=0.0013208807213231921, average_epoch_loss=0.002015853182907449, mode=validation
+now_epoch=83, loss=0.0019232591148465872, average_epoch_loss=0.0028999460368132634, mode=training, learning_rate=[0.00011355770581449162]
+now_epoch=83, loss=0.0008822969975881279, average_epoch_loss=0.0023017654734430837, mode=validation
+now_epoch=84, loss=0.0018603927455842495, average_epoch_loss=0.0028464288486154854, mode=training, learning_rate=[0.00011035475526194986]
+now_epoch=84, loss=0.002205755328759551, average_epoch_loss=0.004871645416831598, mode=validation
+now_epoch=85, loss=0.003794671269133687, average_epoch_loss=0.0027479891244373803, mode=training, learning_rate=[0.00010706663200727116]
+now_epoch=85, loss=0.0011298868339508772, average_epoch_loss=0.003284273724479135, mode=validation
+now_epoch=86, loss=0.008104758337140083, average_epoch_loss=0.002715561394974227, mode=training, learning_rate=[0.00010370125742738174]
+now_epoch=86, loss=0.0031064474023878574, average_epoch_loss=0.005319819967029616, mode=validation
+now_epoch=87, loss=0.0015141353942453861, average_epoch_loss=0.0026081815387846694, mode=training, learning_rate=[0.0001002667390044165]
+now_epoch=87, loss=0.0026266297791153193, average_epoch_loss=0.003320120347023476, mode=validation
+now_epoch=88, loss=0.0006696656346321106, average_epoch_loss=0.002540437919181487, mode=training, learning_rate=[9.677135079408468e-05]
+now_epoch=88, loss=0.0007109833532012999, average_epoch_loss=0.0016931264438899234, mode=validation
+now_epoch=89, loss=0.0011727239470928907, average_epoch_loss=0.0025305882377207227, mode=training, learning_rate=[9.322351349274481e-05]
+now_epoch=89, loss=0.001749467570334673, average_epoch_loss=0.0030353136252379044, mode=validation
+now_epoch=90, loss=0.0007900090422481298, average_epoch_loss=0.0023552548586416784, mode=training, learning_rate=[8.963177415120965e-05]
+now_epoch=90, loss=0.0006729527958668768, average_epoch_loss=0.0017159711249114479, mode=validation
+now_epoch=91, loss=0.0009934435365721583, average_epoch_loss=0.0023776509384948034, mode=training, learning_rate=[8.600478558415213e-05]
+now_epoch=91, loss=0.0006063807522878051, average_epoch_loss=0.00176266511506401, mode=validation
+now_epoch=92, loss=0.00046022282913327217, average_epoch_loss=0.0022921152843983794, mode=training, learning_rate=[8.235128552471707e-05]
+now_epoch=92, loss=0.00077264808351174, average_epoch_loss=0.0016609644315030891, mode=validation
+now_epoch=93, loss=0.0006971566472202539, average_epoch_loss=0.002260957247635815, mode=training, learning_rate=[7.868007557455636e-05]
+now_epoch=93, loss=0.0007673610816709697, average_epoch_loss=0.002041714599414263, mode=validation
+now_epoch=94, loss=0.001436942839063704, average_epoch_loss=0.0021713631228291587, mode=training, learning_rate=[7.500000000000001e-05]
+now_epoch=94, loss=0.003533683717250824, average_epoch_loss=0.004755888742743991, mode=validation
+now_epoch=95, loss=0.029720144346356392, average_epoch_loss=0.002089221894948019, mode=training, learning_rate=[7.131992442544366e-05]
+now_epoch=95, loss=0.0007843939238227904, average_epoch_loss=0.001722301184927346, mode=validation
+now_epoch=96, loss=0.007295087445527315, average_epoch_loss=0.00203163615101625, mode=training, learning_rate=[6.764871447528296e-05]
+now_epoch=96, loss=0.0018492500530555844, average_epoch_loss=0.002344241103710374, mode=validation
+now_epoch=97, loss=0.0004098443896509707, average_epoch_loss=0.0019614810977137596, mode=training, learning_rate=[6.399521441584788e-05]
+now_epoch=97, loss=0.0004667465982493013, average_epoch_loss=0.001692744472558843, mode=validation
+now_epoch=98, loss=0.0006181473145261407, average_epoch_loss=0.001959257964413458, mode=training, learning_rate=[6.036822584879039e-05]
+now_epoch=98, loss=0.001246830215677619, average_epoch_loss=0.0017443977468356024, mode=validation
+now_epoch=99, loss=0.0007503197994083166, average_epoch_loss=0.0018264061265670331, mode=training, learning_rate=[5.677648650725522e-05]
+now_epoch=99, loss=0.0008453149930574, average_epoch_loss=0.0017389840820396785, mode=validation
+now_epoch=100, loss=0.0014081014087423682, average_epoch_loss=0.0018004826226291092, mode=training, learning_rate=[5.3228649205915344e-05]
+now_epoch=100, loss=0.0016834210837259889, average_epoch_loss=0.0024985767476609906, mode=validation
+now_epoch=101, loss=0.0005461744731292129, average_epoch_loss=0.0016831316900788806, mode=training, learning_rate=[4.97332609955835e-05]
+now_epoch=101, loss=0.00046036706771701574, average_epoch_loss=0.0013365426510572433, mode=validation
+now_epoch=102, loss=0.0043137529864907265, average_epoch_loss=0.001659193410631916, mode=training, learning_rate=[4.629874257261827e-05]
+now_epoch=102, loss=0.018737930804491043, average_epoch_loss=0.0038733136894879864, mode=validation
+now_epoch=103, loss=0.0009591765701770782, average_epoch_loss=0.0015557548437435697, mode=training, learning_rate=[4.293336799272886e-05]
+now_epoch=103, loss=0.0006539439782500267, average_epoch_loss=0.0017979612134513445, mode=validation
+now_epoch=104, loss=0.003325078636407852, average_epoch_loss=0.0014982016647053468, mode=training, learning_rate=[3.9645244738050176e-05]
+now_epoch=104, loss=0.002524821786209941, average_epoch_loss=0.0042545419795205815, mode=validation
+now_epoch=105, loss=0.0014429920120164752, average_epoch_loss=0.0014335588408009952, mode=training, learning_rate=[3.6442294185508386e-05]
+now_epoch=105, loss=0.0019985984545201063, average_epoch_loss=0.003052218372817151, mode=validation
+now_epoch=106, loss=0.0010244642617180943, average_epoch_loss=0.0013434349319496606, mode=training, learning_rate=[3.3332232523529855e-05]
+now_epoch=106, loss=0.003102225251495838, average_epoch_loss=0.002383718028489966, mode=validation
+now_epoch=107, loss=0.0003352939966134727, average_epoch_loss=0.0012991651852191555, mode=training, learning_rate=[3.0322552163067502e-05]
+now_epoch=107, loss=0.00040453620022162795, average_epoch_loss=0.0011693662027246318, mode=validation
+now_epoch=108, loss=0.0006371060153469443, average_epoch_loss=0.001214186140245551, mode=training, learning_rate=[2.74205036877266e-05]
+now_epoch=108, loss=0.000402948324335739, average_epoch_loss=0.0010213084435672498, mode=validation
+Model in Epoch 108 Saved! With Average Validation Loss: 0.0010213084435672498
+now_epoch=109, loss=0.0021221814677119255, average_epoch_loss=0.0011641959039892147, mode=training, learning_rate=[2.463307838647362e-05]
+now_epoch=109, loss=0.002471744315698743, average_epoch_loss=0.0011455676723853684, mode=validation
+now_epoch=110, loss=0.0004013234283775091, average_epoch_loss=0.0010987744708302973, mode=training, learning_rate=[2.196699141100894e-05]
+now_epoch=110, loss=0.0015894246753305197, average_epoch_loss=0.0010474110331124393, mode=validation
+now_epoch=111, loss=0.0004475916794035584, average_epoch_loss=0.0010438875387335429, mode=training, learning_rate=[1.9428665598378084e-05]
+now_epoch=111, loss=0.00045771736768074334, average_epoch_loss=0.0010397247356013395, mode=validation
+now_epoch=112, loss=0.000765165954362601, average_epoch_loss=0.0010033590980100496, mode=training, learning_rate=[1.702421599779473e-05]
+now_epoch=112, loss=0.0004221016715746373, average_epoch_loss=0.0010129218647780362, mode=validation
+Model in Epoch 112 Saved! With Average Validation Loss: 0.0010129218647780362
+now_epoch=113, loss=0.0006802676361985505, average_epoch_loss=0.0009546103965710952, mode=training, learning_rate=[1.4759435138951639e-05]
+now_epoch=113, loss=0.0008170343935489655, average_epoch_loss=0.001015878433419857, mode=validation
+now_epoch=114, loss=0.0003668312565423548, average_epoch_loss=0.0009011667912046606, mode=training, learning_rate=[1.26397790773091e-05]
+now_epoch=114, loss=0.00031440280145034194, average_epoch_loss=0.000935065074445447, mode=validation
+Model in Epoch 114 Saved! With Average Validation Loss: 0.000935065074445447
+now_epoch=115, loss=0.00033665908267721534, average_epoch_loss=0.0008433361976122898, mode=training, learning_rate=[1.06703542499796e-05]
+now_epoch=115, loss=0.00046561151975765824, average_epoch_loss=0.0009214751969266218, mode=validation
+Model in Epoch 115 Saved! With Average Validation Loss: 0.0009214751969266218
+now_epoch=116, loss=0.0007064559613354504, average_epoch_loss=0.0008082255279878155, mode=training, learning_rate=[8.85590517387338e-06]
+now_epoch=116, loss=0.0003946754150092602, average_epoch_loss=0.0008761098845134256, mode=validation
+Model in Epoch 116 Saved! With Average Validation Loss: 0.0008761098845134256
+now_epoch=117, loss=0.00039270578417927027, average_epoch_loss=0.0007664137952104081, mode=training, learning_rate=[7.20080301574175e-06]
+now_epoch=117, loss=0.00031098086037673056, average_epoch_loss=0.000761727160832379, mode=validation
+Model in Epoch 117 Saved! With Average Validation Loss: 0.000761727160832379
+now_epoch=118, loss=0.0004762170428875834, average_epoch_loss=0.0007257770378621192, mode=training, learning_rate=[5.709035061653495e-06]
+now_epoch=118, loss=0.00047362715122289956, average_epoch_loss=0.0008020599727751687, mode=validation
+now_epoch=119, loss=0.0005719747859984636, average_epoch_loss=0.0006950650148404141, mode=training, learning_rate=[4.3841951112734485e-06]
+now_epoch=119, loss=0.000342197366990149, average_epoch_loss=0.000859804126972449, mode=validation
+now_epoch=120, loss=0.0010274873347952962, average_epoch_loss=0.0006824511529201926, mode=training, learning_rate=[3.2294748200843385e-06]
+now_epoch=120, loss=0.0012781167170032859, average_epoch_loss=0.0007579407880402869, mode=validation
+Model in Epoch 120 Saved! With Average Validation Loss: 0.0007579407880402869
+now_epoch=121, loss=0.0004283847229089588, average_epoch_loss=0.0006562695354061564, mode=training, learning_rate=[2.247656010409202e-06]
+now_epoch=121, loss=0.0010664132423698902, average_epoch_loss=0.0007412567831052002, mode=validation
+Model in Epoch 121 Saved! With Average Validation Loss: 0.0007412567831052002
+now_epoch=122, loss=0.0004099495999980718, average_epoch_loss=0.0006354700940897197, mode=training, learning_rate=[1.441103969757718e-06]
+now_epoch=122, loss=0.0004881442291662097, average_epoch_loss=0.0007209460508747725, mode=validation
+Model in Epoch 122 Saved! With Average Validation Loss: 0.0007209460508747725
+now_epoch=123, loss=0.00029476627241820097, average_epoch_loss=0.0006259353808111174, mode=training, learning_rate=[8.11761752641424e-07]
+now_epoch=123, loss=0.0004250282363500446, average_epoch_loss=0.000705881915273494, mode=validation
+Model in Epoch 123 Saved! With Average Validation Loss: 0.000705881915273494
+now_epoch=124, loss=0.00031490271794609725, average_epoch_loss=0.0006173246323030779, mode=training, learning_rate=[3.611454995852387e-07]
+now_epoch=124, loss=0.00038981158286333084, average_epoch_loss=0.0007032444578508148, mode=validation
+Model in Epoch 124 Saved! With Average Validation Loss: 0.0007032444578508148
+now_epoch=125, loss=0.0004164499696344137, average_epoch_loss=0.0006119442157634897, mode=training, learning_rate=[9.034078461206963e-08]
+now_epoch=125, loss=0.00030653912108391523, average_epoch_loss=0.0006998215064813848, mode=validation
+Model in Epoch 125 Saved! With Average Validation Loss: 0.0006998215064813848
+0.014715425221435726
